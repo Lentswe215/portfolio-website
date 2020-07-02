@@ -10,8 +10,6 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
     <script src="https://unpkg.com/scrollreveal@4.0.6/dist/scrollreveal.min.js"></script>
     <script
       src="https://kit.fontawesome.com/8c9f7b77e5.js"
@@ -22,28 +20,25 @@
   </head>
 
   <body>
-    <nav class="navbar">
-      <h1>
-        <a href="#header"><i class="fas fa-home"></i></a>
-      </h1>
-      <ul>
-        <li><a href="#aboutme">About me</a></li>
-        <li><a href="#mywork">Projects</a></li>
-      </ul>
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
 
-      <label id="menu-icon">
-        <i class="fa fa-bars">Menu</i>
-      </label>
+    <nav>
+      <h1><a href="#header"><i class="fas fa-home"></i>Home</a></h1>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+      </ul>
     </nav>
 
     <div class="container">
+      
       <div id="header">
-        <div id="stars"></div>
-        <div id="stars2"></div>
-        <div id="stars3"></div>
+       
         <div class="avatar">
-        <img src="./images/cropped_avatar.JPG" class="round-img" />
-      </div>
+          <img src="./images/cropped_avatar.JPG" class="round-img" />
+        </div>
         <div id="intro">
           <p><span class="anim name">EPHRAIM LENTSWE MAMONONG </span></p>
           <p><span class="anim job-title">FULL-STACK WEB DEVELOPER</span></p>
@@ -52,22 +47,23 @@
               href="https://github.com/Lentswe215?tab=repositories"
               target="_blank"
             >
-              <i class="fa fa-github p-1 githublink"></i></a
-            >
+              <i class="fa fa-github p-1 githublink"></i
+            ></a>
             <a
               href="https://www.linkedin.com/in/ephraim-mamonong-295281b4"
               target="_blank"
             >
-              <i class="fa fa-linkedin p-1 linkedinlink"></i></a
-            >
+              <i class="fa fa-linkedin p-1 linkedinlink"></i
+            ></a>
           </p>
         </div>
       </div>
-      <div id="aboutme">
+      <div id="about">
         <h1 class="anim"><strong>About me</strong></h1>
         <div class="innerDiv">
           <p class="lead anim">
-            I'm currently a junior Back-End Web Developer at <a href="https://www.umuzi.org/" class="umuzilink">Umuzi Academy</a>
+            I'm currently a junior Back-End Web Developer at
+            <a href="https://www.umuzi.org/" class="umuzilink">Umuzi Academy</a>
           </p>
           <h3 class="anim">Technical skills:</h3>
           <ol class="tech_skills">
@@ -86,7 +82,7 @@
           </ol>
         </div>
       </div>
-      <div id="mywork">
+      <div id="projects">
         <h1 class="anim">Projects</h1>
         <div class="innerDiv">
           <h3 class="anim">Memory game</h3>
@@ -99,14 +95,15 @@
               /></a>
             </div>
             <div class="tech_used anim">
-              <h4>Technology</h4>
-              <ul>
-                <li class="anim">Html and Css</li>
+              <h4>Tools</h4>
+              <ul class="worklist py-1">
+                <li class="anim">Html </li>
+                <li class="anim"> Css</li>
                 <li class="anim">Vanilla Javascript</li>
               </ul>
             </div>
           </div>
-
+            <hr>
           <h3 class="anim">Visitor checkout page (Github repository)</h3>
           <div class="listofmywork">
             <div class="work anim">
@@ -119,9 +116,10 @@
               /></a>
             </div>
             <div class="tech_used anim">
-              <h4>Technology</h4>
-              <ul>
-                <li class="anim">Html and Css</li>
+              <h4>Tools</h4>
+              <ul class="worklist py-1">
+                <li class="anim">Html</li>
+                <li class="anim">Css</li>
                 <li class="anim">Nodejs</li>
                 <li class="anim">Express</li>
                 <li class="anim">Ajax</li>
@@ -132,25 +130,26 @@
           </div>
         </div>
       </div>
-      
     </div>
 
     <div class="footer" style="color:whitesmoke">
       <div class="footer-contacts">
         <ol>
-          <li class="anim"><i class="fa fa-mobile x5 bg-success p-1"></i> 0813230230</li>
+          <li class="anim">
+            <i class="fa fa-mobile x5 bg-success p-1"></i> 0813230230
+          </li>
           <li class="anim">
             <a href="mailto:ephraimmamonong@gmail.com" target="_blank">
               <i class="fa fa-envelope bg-danger p-1"></i>
               ephraimmamonong@gmail.com</a
             >
           </li>
-         
         </ol>
       </div>
       <div class="footer-copyrights">
         &copy; Designed by Ephraim Mamonong 2020
       </div>
     </div>
+    
   </body>
 </html>

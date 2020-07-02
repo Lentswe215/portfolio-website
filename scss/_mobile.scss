@@ -1,72 +1,148 @@
-@media (max-width: 1034px) {
-.navbar {
+@media (max-width: 1024px) {
+  html {
+    overflow-x: hidden;
+  }
+  #header {
+    grid-template-columns: 100vw;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: 'avatar' 'intro';
+
+    .avatar {
+      width: 100%;
+      img {
+        width: 80%;
+        height: 600px;
+        // top: 0%;
+        // left: 0%;
+        // margin-left: 60%;
+        // margin-top: -19%;
+      }
+    }
+    #intro {
+      grid-area: intro;
+      float: left;
+      margin-top: 70%;
+      font-size: 25px;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .navbar {
+    background-color: $primary-color;
+    // left: -100px;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+
     ul {
-        margin-left: 67%;
-    }
-}
-}
-
-
-
-@media (max-width: 767px) {
-    nav #menu-icon {
-        display: block;
-    }
-
-    nav ul {
-        position: fixed;
-        width: 100%;
-        height: 100vh;
-        background: #2f3640;
-        top: 80px;
-        left: -1000%;
-        text-align: center;
-        transition: all .5s;
-    }
-
-    nav li {
-        display: block;
-        margin: 50px 0;
-        line-height: 30px;
-    }
-
-    nav a {
-        font-size: 20px;
+      flex-direction: column;
+      margin-left: 0%;
+      // margin-top: 40%;
+      text-align: center;
+      font-size: 200%;
+      a {
         text-decoration: none;
+        // border: solid 1px black;
+        width: 95%;
+        margin-top: 50%;
+      }
     }
+  }
+  nav #menubar {
+    display: block;
+  }
+  #header {
+    grid-template-columns: auto;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: 'avatar' 'intro';
 
-    a:hover {
-        border: none;
-        color: #3498db;
+    img {
+      position: absolute;
     }
+  }
 
-    nav ul.show {
-        left:0;
-    }
-    .intro {
-        font-size: 70%;
-        width: 56%;
-        margin-top: 35%;
-    }
+  .container {
     h1 {
-        font-size: 300%;
-        margin:  11% 0 0 4%;
+      font-size: 480%;
+      margin: 1.5% 0% 5% 5%;
     }
 
     .innerDiv {
-        font-size: 150%;
-    }
-    .visitorform {
-        height: 180px;
-    }
+      margin: 16% 5% 5% 2%;
+      height: auto;
+      width: auto;
+      font-size: 100%;
 
+      h3 {
+        font-size: 155%;
+        margin: 0 1rem;
+        font-family: 'Girassol';
+      }
+      .tech_skills {
+        columns: 2;
+        margin-left: 14%;
+      }
+    }
+    .image {
+      width: 100%;
+      position: relative;
+    }
+    .listofprojects {
+      grid-template-columns: 100%;
+      grid-template-areas: 'work' 'tech';
+      padding: 0 1.5rem;
+
+      h4 {
+        font-size: 120%;
+      }
+    }
+    .worklist {
+      margin-left: 5%;
+      columns: 2;
+    }
+  }
+
+  .footer {
+    width: 100%;
+    ol {
+      flex-direction: column-reverse;
+      // text-align: center;
+      margin-left: 7%;
+      li {
+        font-size: 100%;
+      }
+    }
+  }
 }
 
 @media (max-width: 480px) {
-  
-    #intro {
-    top:0;
-    left:0;
+  .container {
+    h1 {
+      font-size: 340%;
     }
-}
 
+    .innerDiv {
+      margin: 24% 5% 5% 5%;
+    }
+
+    .lead {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+  }
+  .tech_skills {
+    columns: 1;
+  }
+  .footer {
+    ol {
+      li {
+        margin: 2rem 0rem;
+      }
+    }
+    .footer-copyrights{
+      font-size: 90%;
+    }
+  }
+}
