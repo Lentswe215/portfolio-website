@@ -3,10 +3,10 @@ sr.reveal('.anim')
 
 
 $(document).ready(() => {
-    $('#menu-icon').click(() => {
-        $('ul').toggleClass('show');
+    $('#menu-bars').click(() => {
+        $('ul').toggleClass('open');
     })
     $('body').on('click', 'nav a', () => {
-        $('ul').toggleClass('show');
+        $('ul').toggleClass('open');
     })
 })

@@ -12,12 +12,8 @@
       img {
         width: 80%;
         height: 600px;
-        // top: 0%;
-        // left: 0%;
-        // margin-left: 60%;
-        // margin-top: -19%;
-      }
     }
+  }
     #intro {
       grid-area: intro;
       float: left;
@@ -25,45 +21,77 @@
       font-size: 25px;
     }
   }
-}
+  h1 {
+    margin: 6% 2%;
+  }
+  .innerDiv {
+    margin: 50% 10%;
+    color:purple;
+  }
 
-@media (max-width: 800px) {
-  .navbar {
-    background-color: $primary-color;
-    // left: -100px;
-    justify-content: center;
-    width: 100vw;
-    height: 100vh;
+  .footer {
+    background: green;
+  }
+
+
+@media (max-width: 768px) {
+  nav {
     overflow-x: hidden;
 
+    #menu-bars {
+      display: block;
+      right: 5%;
+      top: 50%;
+      position: absolute;
+      cursor: pointer;
+      transform: translate(-5%, -50%);
+      z-index: 2;
+    }
     ul {
+      position: fixed;
+      height: 100vh;
+      width: 100%;
+      background-color:darken($color: #ccc, $amount: 70) ;
       flex-direction: column;
-      margin-left: 0%;
-      // margin-top: 40%;
-      text-align: center;
-      font-size: 200%;
+      border:  1px $primary-color solid;
+      clip-path: circle(100px at 90% -10%);
+      -webkit-clip-path:circle(100px at 90% -10%);
+      transition: all 1s ease-out;
+
+      &.open {
+      clip-path: circle(2000px at 100% 10%);
+      -webkit-clip-path:circle(2000px at 100% 10%);
+      }
       a {
-        text-decoration: none;
-        // border: solid 1px black;
-        width: 95%;
-        margin-top: 50%;
+        border: 1px $primary-color solid;
+        padding: 2rem 5rem;
+        font-size: 1.8rem;
+        font-weight: 800;
+        margin-top: -100px ;
       }
     }
   }
-  nav #menubar {
-    display: block;
-  }
   #header {
-    grid-template-columns: auto;
-    grid-template-rows: 50% 50%;
-    grid-template-areas: 'avatar' 'intro';
+   flex-direction: column;
+   font-size: 70%;
+    .avatar{
+      img {
+        margin-top: 0;
+      }
 
-    img {
-      position: absolute;
+    .name {
+      font-size: 10px;
+      display: none;
     }
+    } 
+
+    // #intro {
+    //   display: none;
+    // }
   }
 
   .container {
+    width:100%;
     h1 {
       font-size: 480%;
       margin: 1.5% 0% 5% 5%;
@@ -74,47 +102,60 @@
       height: auto;
       width: auto;
       font-size: 100%;
+      padding: 10px;
 
+      .lead {
+        font-size: 14px;
+      }
       h3 {
         font-size: 155%;
         margin: 0 1rem;
         font-family: 'Girassol';
       }
       .tech_skills {
-        columns: 2;
+        columns: 1;
         margin-left: 14%;
       }
     }
     .image {
       width: 100%;
       position: relative;
+      margin-left: auto;
+    }
+    .tech_used {
+      margin-left: auto;
+
+      ol {
+        margin-left: 10%;
+        columns: 1;
+      }
     }
     .listofprojects {
       grid-template-columns: 100%;
       grid-template-areas: 'work' 'tech';
-      padding: 0 1.5rem;
+      padding: 0;
 
       h4 {
         font-size: 120%;
       }
     }
-    .worklist {
-      margin-left: 5%;
-      columns: 2;
-    }
+    
   }
 
   .footer {
     width: 100%;
     ol {
-      flex-direction: column-reverse;
-      // text-align: center;
+      flex-direction: column;
       margin-left: 7%;
       li {
         font-size: 100%;
       }
     }
+    span {
+      font-size: 60%;
+    }
   }
+}
 }
 
 @media (max-width: 480px) {

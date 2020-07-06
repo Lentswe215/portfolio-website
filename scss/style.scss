@@ -12,29 +12,31 @@ body {
   color: #333;
   margin: 0;
   width: 100vw;
+  overflow-x: hidden;
 }
 
 nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100vw;
-  padding-top:1rem;
-  margin-bottom: 7%;
   position: fixed;
-  z-index: 9;
-  text-transform: uppercase;
-  font-size: 15%;
-  background: linear-gradient(to bottom, rgba(30, 30, 30, .9), rgba(60,60,60, .5));
+  width: 100vw;
+  height:10vh;
+  background-color:darken($color: #ccc, $amount: 70);
+  border-bottom: $primary-color solid 1.8px;
+  color: white;
+  font-family: sans-serif;
+  align-items: center;
+  z-index: 1;
+  padding-top: 0.4rem 1rem;
+  margin-top: -7px;
 
-  a { 
-    color: whitesmoke;
-    padding: 1rem 0;
-    margin: 0 3rem;
-    position: relative;
-    letter-spacing: 2px;
+  #menu-bars {
+    display:none;
+  }
+  a {
+    color:$primary-color;
     text-decoration: none;
-    
+    font-size:1.4rem;
+    border: 2px solid;
+    padding: 0.5rem 3rem;
 
     &:hover {
       animation: slidein .4s forwards linear;
@@ -45,24 +47,30 @@ nav {
 
         }
         50% {
-          color:red;
+          color:darken($color: #ccc, $amount: 40);;
+          background-color: darken($color:$primary-color, $amount: 10)
+
         }
 
         100% {
-          color: $primary-color;
+          color: darken($color: #ccc, $amount: 70);;
           text-decoration: underline;
-          padding: 2px 5px;
-          background-color: $dark-color
+          background-color: $primary-color;
+
         }
       }
     }
   }
+
   ul {
     display: flex;
-
-    li {
-      list-style: none;
-    }
+    list-style: none;
+    justify-content: space-around;
+    width: 50%;
+    height: 100%;
+    margin-left: auto;
+    align-items: center;
+    text-align: center;
   }
 }
  
@@ -76,10 +84,8 @@ nav {
 
   #header {
     grid-area: header;
-    display: grid;
-    grid-template-columns: 30% 70%;
-    grid-template-rows: auto;
-    grid-template-areas: 'avatar intro';
+    display: flex;
+    flex-direction: row;
     width: 100%;
     height: 100vh;
     padding: 0px;
@@ -93,10 +99,10 @@ nav {
 
       img {
         position: relative;
-        width: 100%;
+        width: 50%;
         height: 450px;
-        top: 5%;
-        left: 25%;
+        margin-top:15%;
+        left: 15%;
         border-radius: 50%;
       }
     }
@@ -105,18 +111,17 @@ nav {
       grid-area: intro;
       position: relative;
       top: 5%;
-      right: 0;
+      right: 13%;
       color: $danger-color;
-      text-align: center;
+      // text-align: center;
       font-family: 'Yeseva One', cursive;
-      font-size: 34px;
       font-weight: 300;
       letter-spacing: 10px;
       margin-top: 0px;
       padding-left: 10px;
     }
     .name {
-      font-size: 50px;
+      font-size: 90px;
     }
     .job-title {
       font-size: 26px;
@@ -144,7 +149,7 @@ nav {
   #about {
     grid-area: about;
     background-color: transparent;
-    height: 100vh;
+    height: 100%;
     width: 100%;
 
     .umuzilink {
@@ -154,23 +159,23 @@ nav {
   h1 {
     color: $danger-color;
     font-size: 640%;
-    margin: 3.6% 0% 0% 2%;
+    margin: 3.6% 2%;
     font-family: 'yeseva one';
     position: absolute;
   }
   .innerDiv {
-    background: $dark-color;
-    background-repeat: no-repeat;
+    background: linear-gradient(to bottom left, black, $dark-color, black,$dark-color);
+    background-repeat:repeat;
     border: rgb(107, 105, 104) double;
     border-radius: 2%;
-    margin: 12% 5% 5% 5%;
+    margin: 12% 10%;
     height: auto;
-    width: 90vw;
+    width: 80vw;
     color: snow;
     font-style: italic;
     font-size: 200%;
     font-family: 'roboto';
-    padding: 1%;
+    padding: 1rem 3rem;
     box-shadow: 0 1px 6px #fa1616, 0 1px 4px #2f2519;
   }
   h3 {
@@ -182,7 +187,7 @@ nav {
 
   .tech_skills {
     list-style: square;
-    columns: 4;
+    columns: 3;
     margin-left: 10%;
   }
   #projects {
@@ -220,21 +225,21 @@ nav {
   }
   .tech_used {
     grid-area: tech;
-    list-style: disc;
     margin-left: 3rem;
+    // background: black;
 
     h4 {
       color: $primary-color;
       text-decoration: underline;
       text-align: center;
       text-transform: uppercase;
-      font-size: 200%;
+      font-size: 120%;
     }
-    ul {
+    ol {
       margin-left:auto;
       columns: 3;
-      text-align: center;
-      list-style: none;
+      // text-align: center;
+      list-style: disc;
     }
   }
 }
@@ -253,6 +258,7 @@ nav {
     display: inline;
     list-style: none;
     margin-left: 25%;
+    justify-content: space-between;
   }
   li {
     margin: 2rem 4rem;
