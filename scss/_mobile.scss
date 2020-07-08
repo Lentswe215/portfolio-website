@@ -2,41 +2,43 @@
   html {
     overflow-x: hidden;
   }
-  #header {
-    grid-template-columns: 100vw;
-    grid-template-rows: 50% 50%;
-    grid-template-areas: 'avatar' 'intro';
 
+  .container{
+  #header {
+    flex-direction: column;
     .avatar {
-      width: 100%;
       img {
-        width: 80%;
-        height: 600px;
+        width: 37%;
+        height: 450px;
+        margin-left:  16%;
     }
   }
     #intro {
-      grid-area: intro;
-      float: left;
-      margin-top: 70%;
-      font-size: 25px;
+      text-align: center;
+      right:0;
+      font-size: 11px;
+      .name {
+        font-size: 60px;
+      }
+      .githublink {
+        margin: 0 auto;
+      }
     }
   }
   h1 {
     margin: 6% 2%;
   }
   .innerDiv {
-    margin: 50% 10%;
-    color:purple;
+    margin: 16% 10%;
   }
-
-  .footer {
-    background: green;
   }
+ 
 
 
 @media (max-width: 768px) {
   nav {
     overflow-x: hidden;
+    flex-direction: column;
 
     #menu-bars {
       display: block;
@@ -69,27 +71,56 @@
       }
     }
   }
-  #header {
-   flex-direction: column;
-   font-size: 70%;
-    .avatar{
-      img {
-        margin-top: 0;
+  .container{
+    #header {
+  
+      .avatar {
+        img {
+          width: 46%;
+          height: 350px;
+          margin-left: 11%;
       }
-
-    .name {
-      font-size: 10px;
-      display: none;
     }
-    } 
+      #intro {
+        margin-left:11%;
+        right:3%;
+        font-size: 11px;
+        .name {
+          font-size: 70px;
+        }
+        .job-title {
+          font-size: 23px;
+        }
+      }
+    }
+    h1 {
+      margin: 6% 2%;
+    }
+    .innerDiv {
+      margin-top: 22%; 
+      margin-left:10%;
+    }
+    h3 {
+      color: #ff5200;
+      // background-color: maroon;
+      font-size: 75%;
+      font-family: 'Girassol';
+    }
+    .image {
+      width: 100%;
+      margin: 1rem 0;
+    }
+    .tech_skills {
+      list-style: square;
+      columns: 2;
+      margin-left: 10%;
+    }
+    }
 
     // #intro {
     //   display: none;
     // }
   }
-
-  .container {
-    width:100%;
     h1 {
       font-size: 480%;
       margin: 1.5% 0% 5% 5%;
@@ -111,8 +142,9 @@
         font-family: 'Girassol';
       }
       .tech_skills {
-        columns: 1;
-        margin-left: 14%;
+        columns: 3;
+        margin-left: 7%;
+        font-size: 1rem;
       }
     }
     .image {
@@ -124,6 +156,8 @@
       margin-left: auto;
 
       ol {
+        // background-color: beige;
+        font-size: 1rem;
         margin-left: 10%;
         columns: 1;
       }
@@ -153,26 +187,78 @@
       font-size: 60%;
     }
   }
-}
-}
 
 @media (max-width: 480px) {
+  nav {
+    h1 {
+      font-size: 1.4rem;
+    }
+  }
   .container {
+
+    #header {
+      flex-direction: column;
+      align-items: center;
+      .avatar {
+        img {
+          width: 50%;
+          height: 230px;
+          margin-left: 8%;
+          margin-top: 30%;
+      }
+    }
+      #intro {
+        margin-left:10px;
+        right:3%;
+        font-size: 7px;
+        text-align: center;
+
+        .name {
+          font-size: 23px;
+        }
+        .job-title {
+          font-size: 15px;
+        }
+      }
+
+    }
     h1 {
       font-size: 340%;
     }
 
     .innerDiv {
-      margin: 24% 5% 5% 5%;
+      width: 92vw;
+      margin: 6.8rem 1rem;
+      padding: 10px;
+
+      h3 {
+        font-size: 110%;
+        margin: 0;
+        font-family: 'Girassol';
+      }
     }
 
     .lead {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       margin-bottom: 1rem;
     }
-  }
+  
   .tech_skills {
     columns: 1;
+    margin-left: 14%;
+  }
+
+  .tech_used {
+    margin-left: auto;
+    h4 {
+      font-size: 1.9rem;
+    }
+    ol {
+      font-size: 1rem;
+      margin-left: 14%;
+      columns: 1;
+    }
+  }
   }
   .footer {
     ol {

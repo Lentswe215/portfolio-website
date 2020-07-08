@@ -18,7 +18,7 @@ body {
 nav {
   position: fixed;
   width: 100vw;
-  height:10vh;
+  height:3.8rem;
   background-color:darken($color: #ccc, $amount: 70);
   border-bottom: $primary-color solid 1.8px;
   color: white;
@@ -30,6 +30,10 @@ nav {
 
   #menu-bars {
     display:none;
+  }
+  h1 {
+    font-size: 3rem;
+    color: $primary-color;
   }
   a {
     color:$primary-color;
@@ -90,8 +94,7 @@ nav {
     font-size: 63px;
     font-family: 'Alegreya';
     align-items: center;
-    background: linear-gradient(rgba(0,1,0, .9), rgba(4,0,0, .5));
-
+    background: repeating-linear-gradient(to bottom, rgb(48, 47, 47), #333);
     .avatar {
       grid-area: avatar;
 
@@ -128,6 +131,7 @@ nav {
     .githublink {
       color: whitesmoke;
       font-size: 40px;
+      margin-left: 25%;
       &:hover {
         color: $dark-color;
         background-color: white;
