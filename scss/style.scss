@@ -1,6 +1,12 @@
 @import 'colors';
 @import 'utilities';
 @import 'back-anim';
+@import 'menu';
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap');
+
+@mixin text-fade {
+  transition: all 0.5s ease-out; 
+}
 
 * {
   box-sizing: border-box;
@@ -8,74 +14,82 @@
   padding: 0;
 }
 body {
-  background: #092532;
-  color: #333;
+  background: #000;
+  color: whitesmoke;
+  height: 100vh;
   margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
   width: 100vw;
   overflow-x: hidden;
 }
-
-nav {
+header {
   position: fixed;
-  width: 100vw;
-  height:3.8rem;
-  background-color:darken($color: #ccc, $amount: 70);
-  border-bottom: $primary-color solid 1.8px;
-  color: white;
-  font-family: sans-serif;
-  align-items: center;
-  z-index: 1;
-  padding-top: 0.4rem 1rem;
-  margin-top: -7px;
+  z-index: 2;
+  width:100vw;
+  top:0;
+}
 
-  #menu-bars {
-    display:none;
-  }
-  h1 {
-    font-size: 3rem;
-    color: $primary-color;
-  }
-  a {
-    color:$primary-color;
-    text-decoration: none;
-    font-size:1.4rem;
-    padding: 0.5rem 3rem;
+#intro {
+  padding: 4rem;
+  color: #f5f5f5;
+  overflow: hidden;
+  margin-top: 15vh;
+  
+    
+
+  i {
+    font-size: 1.9rem;
+    font-weight:400;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    background: lighten($color: #000000, $amount: 10);
 
     &:hover {
-      animation: slidein .4s forwards linear;
-      transition: all 5s;
-
-      @keyframes slidein {
-        0% {
-
-        }
-        50% {
-          color:darken($color: #ccc, $amount: 40);;
-          background-color: darken($color:$primary-color, $amount: 10)
-
-        }
-
-        100% {
-          text-decoration: underline;
-          background-color: darken($color: #ccc, $amount: 90);
-
-        }
-      }
+      color: $primary-color;
+      border: 1px solid $primary-color;
+      @include text-fade()
     }
   }
+ 
+}
 
-  ul {
-    display: flex;
-    list-style: none;
-    justify-content: space-around;
-    width: 50%;
-    height: 100%;
-    margin-left: auto;
-    align-items: center;
-    text-align: center;
+h1,
+h2,
+h3 {
+  font-family: 'yeseva one';
+  font-weight: 400;
+ 
+
+  &.lg-heading {
+    font-size: 6rem;
+    text-transform: uppercase;
+  }
+
+  &.sm-heading {
+    font-size: 2.3rem;
+    padding: 0.2rem 1rem;
   }
 }
- 
+
+a{
+  color: #f5f5f5;
+  text-decoration: none;
+}
+.text {
+  color: #f5f5f5 !important;
+  &-secondary {
+  color:$secondary-color;
+  font-size:3rem;
+  font-family: 'Merriweather', serif;
+  }
+  &-vintage {
+    color: $vintage-color;
+  }
+  &-success {
+    color: $success-color;
+  }
+}
 .container {
   display: grid;
   grid-template-columns: 100vw;
@@ -87,14 +101,14 @@ nav {
   #header {
     grid-area: header;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     width: 100%;
     height: 100vh;
     padding: 0px;
     font-size: 63px;
     font-family: 'Alegreya';
     align-items: center;
-    background: repeating-linear-gradient(to bottom, rgb(48, 47, 47), #333);
+    background: linear-gradient(to bottom right, #333, black, #333, black);
     .avatar {
       grid-area: avatar;
 
@@ -102,146 +116,142 @@ nav {
         position: relative;
         width: 50%;
         height: 450px;
-        margin-top:15%;
+        margin-top: 10%;
         left: 15%;
         border-radius: 50%;
       }
     }
 
-    #intro {
-      grid-area: intro;
-      position: relative;
-      top: 5%;
-      right: 13%;
-      color: $danger-color;
-      // text-align: center;
-      font-family: 'Yeseva One', cursive;
-      font-weight: 300;
-      letter-spacing: 10px;
-      margin-top: 0px;
-      padding-left: 10px;
+    .yellow {
+      color: yellow;
     }
-    .name {
-      font-size: 90px;
+    .red {
+      color: red;
+      font-size: 100px;
     }
     .job-title {
-      font-size: 26px;
-    }
-
-    .githublink {
-      color: whitesmoke;
+      color: $danger-color;
       font-size: 40px;
-      margin-left: 25%;
-      &:hover {
-        color: $dark-color;
-        background-color: white;
-        transition-timing-function: ease-in-out;
-      }
-    }
-    .linkedinlink {
-      color: whitesmoke;
-      font-size: 40px;
-      &:hover {
-        color: $primary-color;
-        background-color: white;
-        transition-timing-function: ease-in-out;
-      }
     }
   }
-  #about {
-    grid-area: about;
-    background-color: transparent;
-    height: 100%;
-    width: 100%;
+}
 
-    .umuzilink {
-      color: white;
-    }
-  }
-  h1 {
-    color: $danger-color;
-    font-size: 640%;
-    margin: 3.6% 2%;
-    font-family: 'yeseva one';
-    position: absolute;
-  }
-  .innerDiv {
-    background: linear-gradient(to bottom left, black, $dark-color, black,$dark-color);
-    background-repeat:repeat;
-    border: rgb(107, 105, 104) double;
-    border-radius: 2%;
-    margin: 12% 10%;
-    height: auto;
-    width: 80vw;
-    color: snow;
-    font-style: italic;
-    font-size: 200%;
-    font-family: 'roboto';
-    padding: 1rem 3rem;
-    box-shadow: 0 1px 6px #fa1616, 0 1px 4px #2f2519;
-  }
-  h3 {
-    color: #ff5200;
-    font-size: 145%;
-    margin: 0 1rem;
-    font-family: 'Girassol';
-  }
+#about {
+  grid-area: about;
+  background-color: transparent;
+  width: 100%;
 
-  .tech_skills {
-    list-style: square;
-    columns: 3;
-    margin-left: 10%;
+  .umuzilink {
+    color: white;
   }
-  #projects {
-    grid-area: projects;
-    height: 100%;
-    width: 100%;
-  }
-  #projects h3 {
-    text-align: center;
-  }
+}
 
-  .image {
-    width: 50%;
+.innerDiv {
+  background: linear-gradient(
+    to bottom left,
+    black,
+    $dark-color,
+    black,
+    $dark-color
+  );
+  background-repeat: repeat;
+  border: rgb(107, 105, 104) double;
+  border-radius: 2%;
+  margin: 16.5% 0 0 10%;
+  height: auto;
+  width: 80vw;
+  color: snow;
+  font-style: italic;
+  font-size: 200%;
+  font-family: 'roboto';
+  padding: 1rem 3rem;
+  box-shadow: 0 1px 6px #fa1616, 0 1px 4px #2f2519;
+
+  a {
+    color: white;
+  }
+}
+h3 {
+  color: #ff5200;
+  font-size: 145%;
+  margin: 0.5rem 1rem;
+  font-family: 'Girassol';
+}
+
+.tech_skills {
+  list-style: none;
+  columns: 3;
+  margin-left: 2%;
+  text-align: center;
+
+  li {
+    border-left: white 1px solid;
+    border-right: white 1px solid;
+
+    padding: 0.3rem 1rem;
+  }
+}
+#projects {
+  grid-area: projects;
+  height: 100%;
+  width: 100%;
+
+  a {
+    color: white;
+  }
+}
+#projects h3 {
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.image {
+  width: 50%;
+  position: relative;
+  margin: 0 25%;
+
+  &:hover {
+    opacity: 0.7;
     position: relative;
-    margin: 0 25%;
-
-    &:hover {
-     opacity: .7;
-     position: relative;
-     background-color: rgb(27, 1, 1);
-    }
+    background-color: rgb(27, 1, 1);
   }
-  .listofprojects {
-    padding: 1rem 1.5rem;
-  }
+}
+.listofprojects {
+  padding: 1rem 1.5rem;
+}
 
-  .work {
-    grid-area: work;
+.work {
+  grid-area: work;
+  list-style: none;
+  margin: 0.3rem 1.5rem;
+}
+hr {
+  size: 5px;
+  margin: 2rem 0;
+}
+.tech_used {
+  grid-area: tech;
+  margin-left: 3rem;
+  // background: black;
+
+  h4 {
+    color: $primary-color;
+    text-decoration: underline;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 120%;
+  }
+  ol {
+    margin-left: auto;
+    columns: 3;
+    text-align: center;
     list-style: none;
-    margin: 0.3rem 1.5rem;
-  }
-  hr {
-    size: 5px;
-    margin: 2rem 0;
-  }
-  .tech_used {
-    grid-area: tech;
-    margin-left: 3rem;
-    // background: black;
+    li {
+      border-left: white 1px solid;
+      border-right: white 1px solid;
 
-    h4 {
-      color: $primary-color;
-      text-decoration: underline;
-      text-align: center;
-      text-transform: uppercase;
-      font-size: 120%;
-    }
-    ol {
-      margin-left:auto;
-      columns: 3;
-      // text-align: center;
-      list-style: disc;
+      padding: 0.3rem 1rem;
     }
   }
 }
@@ -256,6 +266,11 @@ nav {
   margin-top: 5%;
   letter-spacing: 2px;
   text-align: center;
+
+  .footer-contacts {
+    font-size: 30px;
+    letter-spacing: 0.2rem;
+  }
   ol {
     display: inline;
     list-style: none;

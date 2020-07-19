@@ -1,273 +1,119 @@
 @media (max-width: 1024px) {
-  html {
-    overflow-x: hidden;
+  #intro {
+    padding: 6rem 1rem;
+
+    i{
+      font-size: 4rem;
+    }
+    .icons {
+      margin-left: 35%;
+    }
+  }
+  h1,
+h2,
+h3 {
+
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  &.lg-heading {
+    font-size: 9rem;
+  
   }
 
-  .container{
-  #header {
-    flex-direction: column;
-    .avatar {
-      img {
-        width: 37%;
-        height: 450px;
-        margin-left:  16%;
-    }
+  &.sm-heading {
+    font-size: 4rem;
   }
-    #intro {
-      text-align: center;
-      right:0;
-      font-size: 11px;
-      .name {
-        font-size: 60px;
-      }
-      .githublink {
-        margin: 0 auto;
-      }
-    }
+}    
   }
-  h1 {
-    margin: 6% 2%;
-  }
-  .innerDiv {
-    margin: 16% 10%;
-  }
-  }
+
  
 
 
 @media (max-width: 768px) {
-  nav {
-    overflow-x: hidden;
-    flex-direction: column;
+  #intro {
+    padding: 6rem 1rem;
 
-    #menu-bars {
-      display: block;
-      right: 5%;
-      top: 50%;
-      position: absolute;
-      cursor: pointer;
-      transform: translate(-5%, -50%);
-      z-index: 2;
+    i{
+      font-size: 2rem;
     }
-    ul {
-      position: fixed;
-      height: 100vh;
-      width: 100%;
-      background-color:darken($color: #ccc, $amount: 70) ;
-      flex-direction: column;
-      border:  1px $primary-color solid;
-      clip-path: circle(100px at 90% -10%);
-      -webkit-clip-path:circle(100px at 90% -10%);
-      transition: all 1s ease-out;
-
-      &.open {
-      clip-path: circle(1000px at 90% -10%);
-      -webkit-clip-path:circle(1000px at 90% -10%);
-      }
-      a {
-        padding: 2rem 5rem;
-        font-size: 1.8rem;
-        font-weight: 800;
-      }
-    }
-  }
-  .container{
-    #header {
-  
-      .avatar {
-        img {
-          width: 46%;
-          height: 350px;
-          margin-left: 11%;
-      }
-    }
-      #intro {
-        margin-left:11%;
-        right:3%;
-        font-size: 11px;
-        .name {
-          font-size: 70px;
-        }
-        .job-title {
-          font-size: 23px;
-        }
-      }
-    }
-    h1 {
-      margin: 6% 2%;
-    }
-    .innerDiv {
-      margin-top: 22%; 
-      margin-left:10%;
-    }
-    h3 {
-      color: #ff5200;
-      // background-color: maroon;
-      font-size: 75%;
-      font-family: 'Girassol';
-    }
-    .image {
-      width: 100%;
-      margin: 1rem 0;
-    }
-    .tech_skills {
-      list-style: square;
-      columns: 2;
-      margin-left: 10%;
-    }
-    }
-
-    // #intro {
-    //   display: none;
-    // }
-  }
-    h1 {
-      font-size: 480%;
-      margin: 1.5% 0% 5% 5%;
-    }
-
-    .innerDiv {
-      margin: 16% 5% 5% 2%;
-      height: auto;
-      width: auto;
-      font-size: 100%;
-      padding: 10px;
-
-      .lead {
-        font-size: 14px;
-      }
-      h3 {
-        font-size: 155%;
-        margin: 0 1rem;
-        font-family: 'Girassol';
-      }
-      .tech_skills {
-        columns: 3;
-        margin-left: 7%;
-        font-size: 1rem;
-      }
-    }
-    .image {
-      width: 100%;
-      position: relative;
-      margin-left: auto;
-    }
-    .tech_used {
-      margin-left: auto;
-
-      ol {
-        // background-color: beige;
-        font-size: 1rem;
-        margin-left: 10%;
-        columns: 1;
-      }
-    }
-    .listofprojects {
-      grid-template-columns: 100%;
-      grid-template-areas: 'work' 'tech';
-      padding: 0;
-
-      h4 {
-        font-size: 120%;
-      }
-    }
+    .icons {
+      margin-left: 0 auto;
     
+    }
+  }
+  h1,
+h2,
+h3 {
+
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  &.lg-heading {
+    font-size: 6rem;
+  
   }
 
-  .footer {
-    width: 100%;
-    ol {
-      flex-direction: column;
-      margin-left: 7%;
-      li {
-        font-size: 100%;
-      }
-    }
-    span {
-      font-size: 60%;
-    }
+  &.sm-heading {
+    font-size: 2.5rem;
+  }
+}
+ 
   }
 
 @media (max-width: 480px) {
-  nav {
-    h1 {
-      font-size: 1.4rem;
+
+  #intro {
+    padding: 4rem 1rem;
+    .icons {
+      margin-left: 25%;
     }
+    i{
+      font-size: 1.6rem
+    }
+    
   }
-  .container {
+  h1,
+h2,
+h3 {
 
-    #header {
-      flex-direction: column;
-      align-items: center;
-      .avatar {
-        img {
-          width: 50%;
-          height: 230px;
-          margin-left: 8%;
-          margin-top: 30%;
-      }
-    }
-      #intro {
-        margin-left:10px;
-        right:3%;
-        font-size: 7px;
-        text-align: center;
-
-        .name {
-          font-size: 23px;
-        }
-        .job-title {
-          font-size: 15px;
-        }
-      }
-
-    }
-    h1 {
-      font-size: 340%;
-    }
-
-    .innerDiv {
-      width: 92vw;
-      margin: 6.8rem 1rem;
-      padding: 10px;
-
-      h3 {
-        font-size: 110%;
-        margin: 0;
-        font-family: 'Girassol';
-      }
-    }
-
-    .lead {
-      font-size: 1.1rem;
-      margin-bottom: 1rem;
-    }
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  &.lg-heading {
+    font-size: 3.3rem;
   
-  .tech_skills {
-    columns: 1;
-    margin-left: 14%;
   }
 
-  .tech_used {
-    margin-left: auto;
-    h4 {
-      font-size: 1.9rem;
+  &.sm-heading {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.3rem;
+    padding: 0.2rem 1rem;
+  }
+}     
+  }
+
+
+@media (max-width:320px){
+  #intro {
+    padding: 6rem 0;
+
+    .icons {
+      margin-left: 25%;
     }
-    ol {
-      font-size: 1rem;
-      margin-left: 14%;
-      columns: 1;
+    i {
+      font-size: 1.3rem;
     }
   }
-  }
-  .footer {
-    ol {
-      li {
-        margin: 2rem 0rem;
-      }
-    }
-    .footer-copyrights{
-      font-size: 90%;
-    }
-  }
+ h1, h2, h3 {
+   &.lg-heading {
+     font-size: 3rem;
+   }
+   &.sm-heading {
+     font-size: 1rem;
+    // margin-left: -5%;
+
+   }
+ }
 }
