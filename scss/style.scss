@@ -115,7 +115,6 @@ a {
 		font-size: 21px;
 		width: 95%;
 		font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
 	}
 
 	.avatar {
@@ -192,13 +191,12 @@ footer {
 	}
 }
 
-
 .btn {
 	display: inline-block;
 	padding: 0.5rem 1rem;
 	border: 0;
 	position: relative;
-	width:100%;
+	width: 100%;
 	margin-bottom: 0.3rem;
 	// margin-left: 1.2rem;
 	text-align: center;
@@ -207,7 +205,7 @@ footer {
 		background-color: $vintage-color;
 		// color: set-text-color($vintage-color);
 	}
-	
+
 	&-light {
 		background: #ccc;
 	}
@@ -217,90 +215,34 @@ footer {
 	}
 }
 
-// .image {
-// 	width: 50%;
-// 	position: relative;
-// 	margin: 0 25%;
-
-// 	&:hover {
-// 		opacity: 0.7;
-// 		position: relative;
-// 		background-color: rgb(27, 1, 1);
-// 	}
-// }
-.listofwork {
-	padding: 1rem 1.5rem;
-}
-
-.work {
-	grid-area: work;
-	list-style: none;
-	margin: 0.3rem 1.5rem;
-}
-hr {
-	size: 5px;
-	margin: 2rem 0;
-}
-.tech_used {
-	grid-area: tech;
-	margin-left: 3rem;
-	// background: black;
-
-	h4 {
-		color: $primary-color;
-		text-decoration: underline;
+.contactboxes {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	div {
+		font-size: 1.2rem;
+		width: 70%;
+		margin-top: 1rem;
+		border: 2px solid white;
+		padding: 1rem 2rem;
 		text-align: center;
-		text-transform: uppercase;
-		font-size: 120%;
-	}
-	ol {
-		margin-left: auto;
-		columns: 3;
-		text-align: center;
-		list-style: none;
-		li {
-			border-left: white 1px solid;
-			border-right: white 1px solid;
-
-			padding: 0.3rem 1rem;
-		}
-	}
-}
-
-.footer {
-	background-color: black;
-	right: 0;
-	padding: 0.4rem;
-	height: 100%;
-	line-height: 1.3;
-	position: relative;
-	margin-top: 5%;
-	letter-spacing: 2px;
-	text-align: center;
-
-	.footer-contacts {
-		font-size: 30px;
-		letter-spacing: 0.2rem;
-	}
-	ol {
-		display: inline;
-		list-style: none;
-		margin-left: 25%;
-		justify-content: space-between;
-	}
-	li {
-		margin: 2rem 4rem;
-		font-family: 'chewy';
-		font-size: 200%;
-
-		a {
-			vertical-align: middle;
-			color: whitesmoke;
-			font-size: 100%;
-			font-weight: bold;
-			&:hover {
-				background: $danger-color;
+		@include text-fade();
+			.email:hover {
+				background: lighten($color: $danger-color, $amount: 10);
+				
 			}
+			.linkedin:hover {
+				background: lighten($color: $primary-color, $amount: 10);
+				
+			}
+			.github:hover {
+				background: lighten($color: $dark-color, $amount: 10);
+				
+			}
+		i {
+			padding: 0.6rem 1rem;
 		}
 	}
 }

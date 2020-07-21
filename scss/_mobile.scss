@@ -45,6 +45,16 @@ h3 {
   #projects {
     overflow: hidden;
   }
+
+  .contactboxes {
+   
+    div {
+      font-size: 1.5rem;
+     
+        
+     
+    }
+  }
   }
 
  
@@ -188,6 +198,25 @@ h3 {
   grid-template-columns: 1fr;
 	margin-top: 10%;
 
+}
+#contactme {
+  h1 {
+    font-size: 40px;
+  }
+}
+.contactboxes {
+  div {
+    font-size: 1rem;
+    width: 80%;
+		padding: 0.5rem 1rem;
+
+   
+     i{
+       padding: 0.3rem 0.5rem;
+      font-size:1rem;
+     }
+   
+  }
 }
 footer {
   text-align: center;
