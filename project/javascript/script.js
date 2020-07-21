@@ -7,7 +7,8 @@ const navList = document.querySelector('.nav-list');
 const navItems = document.querySelectorAll('.nav-item');
 let showMenu = false;
 
-menuBtn.addEventListener('click', () => {
+menuBtn.addEventListener('click', (e) => {
+
 	if (!showMenu) {
 		menuBtn.classList.add('close');
 		menu.classList.add('show');

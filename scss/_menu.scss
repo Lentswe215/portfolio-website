@@ -18,6 +18,12 @@
     color: $vintage-color;
     border: 1px solid;
     padding: 0.3rem;
+    // @include text-fade();
+
+    &:hover{
+      padding:7px;
+      border-radius: 10%;
+    }
   }
 
   .fa-close {
@@ -36,6 +42,13 @@
       padding: 0.3rem;
       color: red;
       width: 100%;
+      // @include text-fade();
+
+
+      &:hover{
+        padding: 7px;
+        border-radius: 10%;
+      }
     }
   }
 }
@@ -73,7 +86,7 @@
   }
 
   .nav-item{
-    border: 2px solid;
+    
     // padding: 0.5rem 1rem;
     width: 60%;
     text-align: center;
@@ -89,16 +102,20 @@
   .nav-link {
     display: inline-block;
     position: relative;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 300;
     text-transform: uppercase;
+    border: 2px solid;
     padding: 1rem 0;
     width: 100%;
     @include text-fade();
 
     &:hover {
+      // font-size: 35px;
+      letter-spacing: 0.2rem;
       color: $secondary-color;
       width: 100%;
+      border-radius: 16%;
       // background-color: red//;
     }
   }

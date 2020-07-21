@@ -1,12 +1,12 @@
 @media (max-width: 1024px) {
+  body {
+    overflow-x: hidden;
+  }
   #intro {
-    padding: 6rem 1rem;
+    padding: 15vh 1rem;
 
     i{
-      font-size: 4rem;
-    }
-    .icons {
-      margin-left: 35%;
+      font-size: 3rem;
     }
   }
   h1,
@@ -17,14 +17,32 @@ h3 {
   justify-content: center;
   align-items: center;
   &.lg-heading {
-    font-size: 9rem;
+    font-size: 5rem;
   
   }
 
   &.sm-heading {
-    font-size: 4rem;
+    font-size: 3rem;
   }
-}    
+} 
+#about{
+  min-height: calc(100vh - 60px);
+
+  .top-section {
+    flex-direction: column;
+    margin-top: 3rem;
+  
+    .avatar {
+      width: 350px;
+      height: 350px;
+     margin: 0 auto;
+    }
+  }
+  .tech_skills {
+    margin: 0 auto;
+  }
+}   
+
   }
 
  
@@ -37,10 +55,7 @@ h3 {
     i{
       font-size: 2rem;
     }
-    .icons {
-      margin-left: 0 auto;
-    
-    }
+
   }
   h1,
 h2,
@@ -58,16 +73,59 @@ h3 {
     font-size: 2.5rem;
   }
 }
+h3 {
+	margin: 0.5rem 0;
+	font-size: 50px !important;
+	font-family: 'Girassol';
+	text-align: center;
+}
+.page-heading {
+	font-size: 80px;
+	width: 100vw;
+}
+
+#about {
+  min-height: calc(100vh - 60px);
+  width:100vw;
+
+  .about-text {
+		margin-top: 2rem;
+		// margin-left: aut;
+		font-size: 14px;
+	}
+  .tech_skills {
+		// width: 97%;
+    font-size: 14px;
+    
+    .skill-block {
+
+			h4 {
+				font-size: 1.3rem;
+			}
+		}
+
+}
  
   }
+}
 
 @media (max-width: 480px) {
-
+  body { 
+    line-height: 1;
+  }
+  .menu-bar {
+    background-color: black !important;
+  }
+  .nav-link {
+    font-size: 0.7rem;
+    text-transform: none;
+   
+    padding: 1rem 0;
+    width: 100%;
+  }
   #intro {
-    padding: 4rem 1rem;
-    .icons {
-      margin-left: 25%;
-    }
+    padding: 15vh 1rem;
+    
     i{
       font-size: 1.6rem
     }
@@ -91,7 +149,41 @@ h3 {
     font-size: 1.3rem;
     padding: 0.2rem 1rem;
   }
-}     
+}   
+
+.page-heading {
+	font-size: 50px;
+	margin: 1rem;
+  text-align: start;
+}
+#about {
+  .top-section{
+  .avatar {
+    width: 230px;
+    height: 230px;
+  }
+}
+  .tech_skills {
+		grid-template-columns: 1fr;
+		font-size: 16.3px;
+	
+		.skill-block {
+      padding: 10px 0;
+      text-align: center;
+			line-height: 1.6;
+	}
+}
+}
+h3 {
+  flex-direction: row;
+	margin: 0.5rem 0;
+	font-size: 30px !important;
+	
+}
+
+footer {
+  font-size: 12px;
+}
   }
 
 
@@ -99,9 +191,9 @@ h3 {
   #intro {
     padding: 6rem 0;
 
-    .icons {
-      margin-left: 25%;
-    }
+    // .icons {
+    //   margin-left: 25%;
+    // }
     i {
       font-size: 1.3rem;
     }
