@@ -7,6 +7,7 @@ const navList = document.querySelector('.nav-list');
 const navItems = document.querySelectorAll('.nav-item');
 let showMenu = false;
 
+console.log('i am visible')
 menuBtn.addEventListener('click', (e) => {
 
 	if (!showMenu) {
