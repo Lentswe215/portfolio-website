@@ -166,6 +166,9 @@ h3 {
   text-align: start;
 }
 #about {
+  h1 {
+    font-size: 35px;
+  }
   .top-section{
   .avatar {
     width: 230px;
@@ -205,6 +208,7 @@ h3 {
   }
 }
 .contactboxes {
+  padding-top: 20%;
   div {
     font-size: 1rem;
     width: 100%;
@@ -213,7 +217,7 @@ h3 {
    
      i{
        padding: 0.3rem 0.5rem;
-      font-size:1rem;
+      // font-size:1.3rem;
      }
    
   }

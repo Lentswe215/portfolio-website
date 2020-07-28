@@ -15,7 +15,7 @@
   transition-delay: 100ms;
 
   .fa-bars {
-    color: $vintage-color;
+    color: $random-color;
     border: 1px solid;
     padding: 0.3rem;
 
@@ -92,7 +92,8 @@
     
 
     &.current > a{
-      color: $vintage-color;
+      background-color: $primary-color;
+      color:set-text-color($primary-color)
       
     }
   }
