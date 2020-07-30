@@ -42,8 +42,12 @@ h3 {
     margin: 0 auto;
   }
 }   
-  #projects {
+  .projects {
     overflow: hidden;
+
+    .cv19screenshot {
+      height: 278px !important;
+    }
   }
 
   .contactboxes {
@@ -60,7 +64,7 @@ h3 {
  
 
 
-@media (max-width: 768px) {
+@media (max-width: 768px){
   #intro {
     padding: 10vh 1rem;
 
@@ -114,6 +118,12 @@ h3 {
 
 }
  
+  }
+
+  .projects {
+    .cv19screenshot {
+      height: 208px !important;
+    }
   }
   
 }
@@ -199,12 +209,15 @@ h3 {
 
 .projects {
   grid-template-columns: 1fr;
-	margin-top: 10%;
-
+  margin-top: 10%;
+  
+  .cv19screenshot {
+    height: 330px !important;
+  }
 }
 #contactme {
   h1 {
-    font-size: 35px;
+    font-size: 32px;
   }
 }
 .contactboxes {

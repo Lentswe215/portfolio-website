@@ -14,7 +14,7 @@
 }
 
 body {
-	background: #232e2f;
+	background: #090106;
 	color: #d3d5fd;
 	height: 100%;
 	margin: 0;
@@ -43,6 +43,7 @@ header {
 	text-align: center;
 
 	i {
+		position: relative;;
 		font-size: 1.9rem;
 		font-weight: 400;
 		margin-top: 1rem;
@@ -183,17 +184,21 @@ footer {
 	grid-template-columns: repeat(3, 1fr);
 	grid-gap: 0.7rem;
 	padding: 0 5%;
-	// overflow: hidden;
+
 	img {
 		position: relative;
 		width: 100%;
-		border: 3px $random-color solid;
+	border: 2px solid $light-color;
 
+	
 		&:hover {
-			opacity: 0.5;
+			// opacity: 0.5;
 			border-color: $random-color;
 			@include text-fade();
 		}
+	}
+	.screenshot {
+		height: 370px;
 	}
 }
 
@@ -207,20 +212,30 @@ footer {
 	// margin-left: 1.2rem;
 	text-align: center;
 
+
 	&:hover {
 		background-color: $random-color;
-		// color: set-text-color($random-color);
+		color: set-text-color($random-color);
 	}
 
-	&-primary {
-		background: $random-color;
+	&-success {
+		background: $success-color;
 	}
 
 	&-dark {
 		background: $dark-color;
 	}
 }
-
+#work{
+	h4 {
+		font-size: 30px;
+		line-height: 1.3;
+		a:hover{
+			text-decoration: underline;
+			color: $random-color;
+		}
+	}
+}
 .contactboxes {
 	display: flex;
 	flex-wrap: wrap;
@@ -230,6 +245,7 @@ footer {
 	div {
 		font-size: 1.7rem;
 		width: 70%;
+		height: 100%;
 		margin-top: 1rem;
 		border: 2px solid white;
 		padding: 1rem 2rem;
@@ -238,16 +254,16 @@ footer {
 		vertical-align: middle;
 
 		&:hover {
-			padding: 0.5rem 1.5rem;
-			line-height: 1;
 			color: set-text-color($random-color);
 			background: $random-color;
 			a {
 				color: set-text-color($random-color);
+				text-decoration: underline;
 			}
 
 			i {
 				color: set-text-color($random-color);
+				border: 1px solid;
 			}
 		}
 		i {

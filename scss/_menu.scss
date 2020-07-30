@@ -92,8 +92,8 @@
     
 
     &.current > a{
-      background-color: $primary-color;
-      color:set-text-color($primary-color)
+      background-color: $random-color;
+      color:set-text-color($random-color)
       
     }
   }
@@ -114,7 +114,7 @@
       letter-spacing: 0.2rem;
       color: $secondary-color;
       width: 100%;
-      border-radius: 16%;
+      border-radius: 5%;
       // background-color: red//;
     }
   }
