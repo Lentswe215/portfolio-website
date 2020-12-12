@@ -1,5 +1,5 @@
 @mixin text-fade {
-  transition: all 1s ease-out; 
+  transition: all 0.5s ease-out; 
 }
 
 .menu-bars {
@@ -9,14 +9,14 @@
   top: 10px;
   font-size: 28px;
   cursor: pointer;
-  padding: 1px 0.4rem;
+  padding: 1px 0.3rem;
 
-  transition: all 0.8s linear;
+  transition: all 0.5s linear;
   transition-delay: 100ms;
 
   .fa-bars {
     color: $random-color;
-    border: 1px solid;
+    // border: 1px solid;
     padding: 0.3rem;
 
     &:hover{
@@ -37,7 +37,7 @@
     }
     .fa-close {
       display: block;
-      border: 1px solid;
+      // border: 1px solid;
       padding: 0.3rem;
       color: red;
       width: 100%;
@@ -67,16 +67,16 @@
 
 .nav-list {
   display: flex;
-  flex-flow: column wrap;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  // float: left;
+  float: right;
   width: 100%;
   height:100vh;
   margin:0;
-  padding: 0;
-  background:#232931;
+  padding: 0 24px 0 0;
   transform: translate3d(0, -100%, 0);
+  background-color:#d3d5fd;
   @include text-fade;
 
   &.show {
@@ -84,17 +84,24 @@
   }
 
   .nav-item{
-    
+    // background: #004566;
     // padding: 0.5rem 1rem;
     width: 60%;
     text-align: center;
     margin: 1rem 0;
+    color: #220316;
     
 
-    &.current > a{
-      background-color: $primary-color;
-      color:set-text-color($primary-color)
+    .current{
+      background-color:  $random-color;
+      color: #220316;
       
+      &:hover{
+        background-color: $random-color;
+        color: #220316;
+        border-radius: 0%;
+        letter-spacing: 0rem;
+      }
     }
   }
 
@@ -107,14 +114,16 @@
     border: 2px solid;
     padding: 1rem 0;
     width: 100%;
+    color: #220316;
     @include text-fade();
 
     &:hover {
       // font-size: 35px;
       letter-spacing: 0.2rem;
-      color: $secondary-color;
+      color :#d3d5fd;
+      background-color: #220316;
       width: 100%;
-      border-radius: 16%;
+      border-radius: 18px;
       // background-color: red//;
     }
   }
@@ -127,3 +136,8 @@
   }
 }
 
+@media (max-width: 480px) {
+  .nav-list{
+    width: 100%;
+  }
+}
