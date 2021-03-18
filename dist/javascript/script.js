@@ -1,3 +1,7 @@
+"use strict"
+
+const swup = new Swup();
+
 window.sr = ScrollReveal();
 sr.reveal('.anim');
 
@@ -29,3 +33,4 @@ menuBtn.addEventListener('click', (e) => {
 		showMenu = false;
 	}
 });
+

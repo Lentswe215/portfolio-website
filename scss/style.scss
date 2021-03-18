@@ -1,273 +1,347 @@
-@import 'colors';
-@import 'utilities';
-@import 'back-anim';
-@import 'menu';
+@import "colors";
+@import "utilities";
+// @import 'back-anim';
+@import "menu";
 
 @mixin text-fade {
-	transition: all 0.5s ease-out;
+  transition: all 0.5s ease-in-out;
 }
 
 * {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-	background: #090106;
-	color: #d3d5fd;
-	height: 100%;
-	margin: 0;
-	font-family: 'Yeseva One', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	line-height: 1.5;
-	width: 100vw;
-	overflow-x: hidden;
+  background: $background-color !important;
+  background-size: 100%;
+  color: $body-color !important;
+  margin: 0;
+  font-family: "Yeseva One", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+  width: 100vw;
+  overflow-x: hidden;
 
-	a {
-		color:#d3d5fd;
-	}
+  a {
+    color: #d3d5fd;
+  }
 }
 header {
-	position: fixed;
-	z-index: 2;
-	width: 100vw;
-	top: 0;
-	font-family: 'chewy';
+  position: fixed;
+  z-index: 2;
+  width: 100vw;
+  top: 0;
+  font-family: "chewy";
 }
 
-#page-body{
-	@include text-fade();
+#page-body {
+  @include text-fade();
+  height: 100vh;
+overflow-y: hidden;
 }
 
 #intro {
-	padding: 4rem;
-	// color: #f5f5f5;
-	overflow: hidden;
-	margin-top: 15vh;
-	text-align: center;
+  padding: 4rem;
+  background-color: #130f0f;
+  overflow: hidden;
+  margin-top: 20vh !important;
+  width: 80vw;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  z-index: 400;
+  box-shadow: 20px 20px $vintage-color;
+  border: 1px solid $vintage-color;
 
-	i {
-		font-size: 1.9rem;
-		font-weight: 400;
-		margin-top: 1rem;
-		margin-left: 1rem;
-		background: lighten($color: #000000, $amount: 10);
-
-		&:hover {
-			color: $random-color;
-			border: 1px solid $random-color;
-			@include text-fade();
-		}
-	}
+  i {
+    font-size: 1.9rem;
+    font-weight: 400;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    // background: $body-color;
+    color: $random-color;
+    &:hover {
+      color: $body-color;
+      background: $random-color;
+      border: 1px solid $body-color;
+      @include text-fade();
+    }
+  }
 }
 
 h1,
 h2,
 h3 {
-	font-family: 'yeseva one';
-	font-weight: 400;
+  font-family: "yeseva one";
+  font-weight: 400;
 
-	&.lg-heading {
-		font-size: 6rem;
-		text-transform: uppercase;
-		position: relative;
-	}
+  &.lg-heading {
+    font-size: 6rem;
+    text-transform: uppercase;
+    position: relative;
+  }
 
-	&.sm-heading {
-		font-size: 2.3rem;
-		padding: 0.2rem 1rem;
-		position: relative;
-	}
+  &.sm-heading {
+    font-size: 2.3rem;
+    padding: 0.2rem 1rem;
+    position: relative;
+  }
 }
 
 a {
-	color: #f5f5f5;
-	text-decoration: none;
+  color: #f5f5f5;
+  text-decoration: none;
 }
 .text {
-	// color: #f5f5f5 !important;
-	&-secondary {
-		color: $secondary-color;
-		font-size: 3rem;
-		font-family: 'Merriweather', serif;
-	}
-	&-vintage {
-		color: $random-color;
-	}
-	&-success {
-		color: $success-color;
-	}
+  // color: #f5f5f5 !important;
+  &-secondary {
+    color: $secondary-color;
+    font-size: 3rem;
+    font-family: "Merriweather", serif;
+  }
+  &-vintage {
+    color: $vintage-color;
+  }
+  &-success {
+    color: $success-color;
+  }
+  &-random {
+    color: $random-color;
+  }
 }
 
 .page-heading {
-	font-size: 100px;
-	width: 100vw;
-	margin: 0 1.3rem;
-	letter-spacing: 0.2rem;
-	text-transform: uppercase;
+  font-size: 100px;
+  width: 100vw;
+  margin: 0 1.3rem;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
 }
 
 #about {
-	min-height: calc(100vh -60px);
-	background-color: transparent;
-	width: 100vw;
-	overflow: hidden;
-	letter-spacing: 0.25rem;
+  min-height: calc(100vh -60px);
+  background-color: transparent;
+  width: 100vw;
+  overflow: hidden;
+  letter-spacing: 0.25rem;
 
-	.top-section {
-		display: flex;
-		margin-bottom: min($numbers: 2rem);
-	}
-	.about-text {
-		margin-top: 2rem;
-		margin-left: 2%;
-		padding: 3%;
-		font-size: 21px;
-		width: 95%;
-		font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-	}
+  .top-section {
+    display: flex;
+    margin-bottom: min($numbers: 2rem);
+  }
+  .about-text {
+    color: $random-color !important;
+    margin-top: 2rem;
+    margin-left: 2%;
+    padding: 3%;
+    font-size: 21px;
+    width: 95%;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
+  }
 
-	.avatar {
-		position: relative;
-		width: 350px;
-		height: 350px;
-		margin-left: 3rem;
-		border-radius: 50%;
-	}
-	.tech_skills {
-		display: grid;
-		grid-template-columns: repeat(4, 1fr);
-		width: 90%;
-		list-style: none;
-		margin: 0 auto;
-		font-size: 19px;
-		margin-bottom: min($numbers: 2rem);
+  .avatar {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    margin-left: 3rem;
+    border-radius: 50%;
+  }
+  .tech_skills {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 90%;
+    list-style: none;
+    margin: 0 auto;
+    font-size: 19px;
+    margin-bottom: min($numbers: 2rem);
 
-		.skill-block {
-			border: white 1px solid;
-			padding: 0.5rem 0.6rem;
-			color: $random-color;
+    .skill-block {
+      border: $vintage-color 1px solid;
+      padding: 0.5rem 0.6rem;
+      color: $random-color;
 
-			h4 {
-				margin-bottom: 6px;
-				font-size: 1.8rem;
-				border-bottom: solid 3px;
-				color: white;
-			}
-		}
-	}
+      h4 {
+        margin-bottom: 6px;
+        font-size: 1.8rem;
+        border-bottom: solid 3px;
+        color: $body-color;
+      }
+    }
+  }
 }
 
 h3 {
-	margin: 0.5rem 0;
-	font-size: 50px !important;
-	font-family: 'Girassol';
-	text-align: center;
+  margin: 0.5rem 0;
+  font-size: 50px !important;
+  font-family: "Girassol";
+  text-align: center;
 }
 
 footer {
-	position: relative;
-	padding: 1rem;
-	font-size: auto;
-	margin-top: min(30px);
-	text-align: center;
-	background: darken($color: #001, $amount: 10);
-	height: 60px;
+  position: relative;
+  padding: 1rem;
+  font-size: auto;
+  margin-top: min(30px);
+  text-align: center;
+  background: darken($color: $background-color, $amount: 40);
+  height: 60px;
+  color: #fff;
 }
 
 #work {
-	grid-area: work;
-	overflow: hidden;
-	min-height: 100vh;
-	width: 100vw;
+  grid-area: work;
+  overflow: hidden;
+  min-height: 100vh;
+  width: 100vw;
 }
 
 .projects {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-gap: 0.7rem;
-	padding: 0 5%;
-	// overflow: hidden;
-	img {
-		position: relative;
-		width: 100%;
-		border: 3px $random-color solid;
+  display: flex;
+  flex-direction: column;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0.7rem;
+  padding: 0 5%;
+  // overflow: hidden;
 
-		&:hover {
-			opacity: 0.5;
-			border-color: $random-color;
-			@include text-fade();
-		}
-	}
+  h3 {
+    text-align: left !important;
+  }
+  .item {
+    // border: 1px $vintage-color solid;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+    margin: 0 30%;
+   
+  
+
+    &-body {
+      h3 {
+        color: $body-color;
+      }
+
+      li {
+        width: 400px;
+        color: $random-color;
+        list-style-type: none;
+        padding: 4px;
+        margin-left: 15px;
+        border: dotted 1px $body-color;
+        text-align: center;
+        text-transform: uppercase;
+      }
+    }
+   
+  }
+}
+
+.image-block {
+  margin: 0 auto;
+  box-shadow: 15px 15px $vintage-color;
+}
+.work-pics {
+  position: relative !important;
+  width: 100% !important;
+  // height: 250px !important;
+  margin: 0px auto !important;
+
+  &:hover {
+    opacity: 0.5 !important;
+    border-color: $random-color 3px solid !important;
+    @include text-fade();
+  }
+}
+.moreProjects {
+  margin: 2.2rem 3.2rem;
 }
 
 .btn {
-	display: inline-block;
-	padding: 0.5rem 1rem;
-	border: 0;
-	position: relative;
-	width: 100%;
-	margin-bottom: 0.3rem;
-	// margin-left: 1.2rem;
-	text-align: center;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  position: relative;
+  width: 100%;
+  margin-bottom: 0.3rem;
+  // margin-left: 1.2rem;
+  text-align: center;
 
-	&:hover {
-		background-color: $random-color;
-		// color: set-text-color($random-color);
-	}
+  &:hover {
+    background-color: $random-color;
+    // color: set-text-color($random-color);
+  }
 
-	&-primary {
-		background: $random-color;
-	}
+  &-primary {
+    background: $random-color;
+  }
 
-	&-dark {
-		background: $dark-color;
-	}
+  &-dark {
+    background: $dark-color;
+  }
+
+  &-link {
+    border: 1px solid;
+    padding: 12px;
+    margin-left: 45%;
+    width: 50%;
+    text-align: center;
+    color: $body-color !important;
+    &:hover {
+      background-color: $body-color !important;
+      color: $background-color !important;
+    }
+  }
+}
+
+.form-container{
+  background-color: $light-color;
+  color: $vintage-color;
 }
 
 .contactboxes {
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: column;
-	justify-content: space-evenly;
-	align-items: center;
-	a {
-		font-size: 1.6rem;
-		width: 40%;
-		color: #d3d5fd;
-		margin-top: 1rem;
-		border: 2px solid;
-		padding:0.8rem 0;
-		text-align: center;
-		@include text-fade();
-		vertical-align: middle;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  a {
+    font-size: 1.6rem;
+    width: 70%;
+    color: #d3d5fd;
+    margin-top: 1rem;
+    border: 2px solid;
+    padding: 0.8rem 0;
+    text-align: center;
+    @include text-fade();
+    vertical-align: middle;
 
-		&:hover {
-			// padding: 1rem 1.5rem;
-			// line-height: 1;
-			color: set-text-color($random-color);
-			background: $random-color;
-			a {
-				color: set-text-color($random-color);
-			}
+    &:hover {
+      // padding: 1rem 1.5rem;
+      // line-height: 1;
+      color: set-text-color($random-color);
+      background: $random-color;
+      a {
+        color: set-text-color($random-color);
+      }
 
-			i {
-				color: set-text-color($random-color);
-			}
-		}
-		&.phoneNo {
-			background-color:#433442;
-			color: set-text-color(#433442);
-			i {
-				color: set-text-color(#433442);
-				font-size: 2.3rem !important;
-			}
-		}
-		i {
-			padding: 0.6rem 1rem;
-			font-size: 1.3rem;
-		}
-	}
+      i {
+        color: set-text-color($random-color);
+      }
+    }
+    &.phoneNo {
+      background-color: #433442;
+      color: set-text-color(#433442);
+      i {
+        color: set-text-color(#433442);
+        font-size: 2.3rem !important;
+      }
+    }
+    i {
+      padding: 0.6rem 1rem;
+      font-size: 1.3rem;
+    }
+  }
 }
 
-@import 'mobile';
+@import "mobile";

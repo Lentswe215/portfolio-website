@@ -1,111 +1,5 @@
-@media (max-width: 1024px) {
-  body {
-    overflow-x: hidden;
-  }
-
-  #intro {
-    padding: 15vh 1rem;
-
-    i {
-      font-size: 3rem;
-    }
-  }
-  h1,
-  h2,
-  h3 {
-    // text-align: center;
-    // justify-content: center;
-    // align-items: center;
-    &.lg-heading {
-      font-size: 5rem;
-    }
-
-    &.sm-heading {
-      font-size: 3rem;
-    }
-  }
-  #about {
-    min-height: calc(100vh - 60px);
-
-    .top-section {
-      flex-direction: column;
-      margin-top: 3rem;
-
-      .avatar {
-        width: 350px;
-        height: 350px;
-        margin: 0 auto;
-      }
-    }
-    .tech_skills {
-      margin: 0 auto;
-    }
-  }
-  #projects {
-    overflow: hidden;
-  }
-
-  .contactboxes {
-    a {
-      font-size: 1.5rem;
-    }
-  }
-}
-
-@media (max-width: 768px) {
-  .nav-list {
-    width: 100%;
-  }
-  #intro {
-    padding: 10vh 1rem;
-
-    i {
-      font-size: 2rem;
-    }
-  }
-  h1,
-  h2,
-  h3 {
-    &.lg-heading {
-      font-size: 6rem;
-    }
-
-    &.sm-heading {
-      font-size: 2rem;
-    }
-  }
-  h3 {
-    margin: 0.5rem 0;
-    font-size: 50px !important;
-    font-family: "Girassol";
-    text-align: center;
-  }
-  .page-heading {
-    font-size: 80px;
-    width: 100vw;
-  }
-
-  #about {
-    min-height: calc(100vh - 60px);
-    width: 100vw;
-
-    .about-text {
-      margin-top: 2rem;
-      // margin-left: aut;
-      font-size: 14px;
-    }
-    .tech_skills {
-      // width: 97%;
-      font-size: 14px;
-
-      .skill-block {
-        h4 {
-          font-size: 1.3rem;
-        }
-      }
-    }
-  }
-}
+@import "laptop";
+@import "tablet";
 
 @media (max-width: 480px) {
   body {
@@ -135,7 +29,7 @@
     justify-content: center;
     align-items: center;
     &.lg-heading {
-      font-size: 3.3rem;
+      font-size: 3rem;
     }
 
     &.sm-heading {
@@ -186,7 +80,22 @@
   .projects {
     grid-template-columns: 1fr;
     margin-top: 10%;
+
+    .item {
+      margin: 0;
+      width: 100% !important;
+
+      &-image {
+        height: 200px;
+      }
+    }
   }
+
+  .btn {
+    &-link {
+      margin-left: 29%;
+    }
+}
   #work {
     h4 {
       font-size: 12px;
@@ -198,7 +107,7 @@
   }
 
   .contactboxes {
-    padding-top: 20%;
+    padding-top: 13%;
     a {
       font-size: 1rem;
       width: 100%;
